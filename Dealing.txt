@@ -1,0 +1,14 @@
+def deal_cards(deck, num_players, num_cards):
+    hands = [[] for _ in range(num_players)]
+
+    for _ in range(num_cards):
+        for player in range(num_players):
+            card = deck.pop()
+            hands[player].append(card)
+
+    return hands
+
+# Example usage
+num_players = 4
+num_cards_per_hand = 5
+player_hands = deal_cards(shuffled_deck.copy(), num_players, num_cards_per_hand)
